@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-yellow-300">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Martial Arts Club — Gear Catalog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col items-center">
+
+  <!-- HEADER — full width -->
+  <div class="w-full flex justify-center">
+    <header class="w-full max-w-[1920px] bg-[#5c1a14] border-2 border-yellow-400 p-6 text-center">
+      <h1 class="text-3xl font-bold mb-2">🥋 Martial Arts Club Gear</h1>
+      <p>Select your gear, choose your options, then submit your order.</p>
+    </header>
+  </div>
+
+
+  <!-- PRODUCT GRID -->
+  <main class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-[1920px] p-6">
+
+    <!-- 1. Men’s Black Uniform -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/1-uniform.jpg" alt="Men's Black Uniform" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Men’s Black Uniform</h2>
+          <p class="text-sm text-yellow-200">Traditional uniform, sizes 1–7</p>
+          <p class="text-yellow-400 font-semibold mt-1">$45.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Men’s Black Uniform" data-price="45">
+            <span>Add to Order</span>
+          </label>
+          <select class="bg-black border border-yellow-400 text-yellow-300 rounded p-1 text-sm">
+            <option>Select Size</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Men’s Black T-Shirt -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/2-mns-t.jpg" alt="Men's Black T-Shirt" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Men’s Black T-Shirt</h2>
+          <p class="text-sm text-yellow-200">Sizes: Small – XXL</p>
+          <p class="text-yellow-400 font-semibold mt-1">$20.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Men’s Black T-Shirt" data-price="20">
+            <span>Add to Order</span>
+          </label>
+          <select class="bg-black border border-yellow-400 text-yellow-300 rounded p-1 text-sm">
+            <option>Select Size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>XL</option>
+            <option>XXL</option>
+          </select>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Sparring Gear Set -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/3-spar.jpeg" alt="Sparring Gear Set" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Sparring Gear Set</h2>
+          <p class="text-sm text-yellow-200">Protective foam set, sizes S ‒ L</p>
+          <p class="text-yellow-400 font-semibold mt-1">$75.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Sparring Gear Set" data-price="75">
+            <span>Add to Order</span>
+          </label>
+          <select class="bg-black border border-yellow-400 text-yellow-300 rounded p-1 text-sm">
+            <option>Select Size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Textbooks (Vol1 / Vol2) -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/4-txtbk2.jpg" alt="Textbooks" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Textbooks</h2>
+          <p class="text-sm text-yellow-200">Select one or both volumes</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <div class="flex gap-4">
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="item-check textbook-check accent-yellow-400" data-name="Textbook Vol 1"
+                data-price="120">
+              <span>Vol 1</span>
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="checkbox" class="item-check textbook-check accent-yellow-400" data-name="Textbook Vol 2"
+                data-price="120">
+              <span>Vol 2</span>
+            </label>
+          </div>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty textbook-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Patch Set -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/5-patches.jpg" alt="Patch Set" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Patch Set</h2>
+          <p class="text-sm text-yellow-200">Logo & rank patches included</p>
+          <p class="text-yellow-400 font-semibold mt-1">$10.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Patch Set" data-price="10">
+            <span>Add to Order</span>
+          </label>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Wooden Sword -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/6-wdswd.png" alt="Wooden Sword" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Wooden Sword</h2>
+          <p class="text-sm text-yellow-200">Hardwood, full-length practice sword</p>
+          <p class="text-yellow-400 font-semibold mt-1">$30.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Wooden Sword" data-price="30">
+            <span>Add to Order</span>
+          </label>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Metal Sword -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/7-metswd.jpg" alt="Metal Sword" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Metal Sword</h2>
+          <p class="text-sm text-yellow-200">Aluminum demo blade</p>
+          <p class="text-yellow-400 font-semibold mt-1">$60.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Metal Sword" data-price="60">
+            <span>Add to Order</span>
+          </label>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Rank Belt -->
+    <div class="flex flex-col border border-yellow-400 bg-[#1f1f1f] rounded-lg overflow-hidden h-[400px]">
+      <div class="h-48 w-full overflow-hidden">
+        <img src="../assets/images/8-belt.png" alt="Rank Belt" class="h-full w-full object-cover" />
+      </div>
+      <div class="p-4 flex flex-col justify-between flex-grow">
+        <div>
+          <h2 class="text-lg font-bold text-yellow-300">Rank Belt</h2>
+          <p class="text-sm text-yellow-200">Colors: White, Yellow, Blue, Red, Brown, Black</p>
+          <p class="text-yellow-400 font-semibold mt-1">$10.00</p>
+        </div>
+        <div class="flex flex-col gap-2 mt-3">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="item-check accent-yellow-400" data-name="Rank Belt" data-price="10">
+            <span>Add to Order</span>
+          </label>
+          <select class="bg-black border border-yellow-400 text-yellow-300 rounded p-1 text-sm">
+            <option>Select Color</option>
+            <option>White</option>
+            <option>Yellow</option>
+            <option>Blue</option>
+            <option>Red</option>
+            <option>Brown</option>
+            <option>Black</option>
+          </select>
+          <input type="number" min="1" value="1" disabled
+            class="item-qty w-20 p-1 text-center bg-black border border-yellow-400 rounded text-yellow-300" />
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ORDER SUMMARY / FOOTER (full width) -->
+  <div class="w-full flex justify-center">
+    <section class="w-full max-w-[1920px] bg-[#5c1a14] border-2 border-yellow-400 p-6 text-center mt-4 mb-10">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-400">🧾 Order Summary</h2>
+      <ul id="orderList" class="text-left mb-4 text-yellow-200 pl-6"></ul>
+      <p class="text-xl font-bold text-yellow-300">Total: $<span id="orderTotal">0.00</span></p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+        <button id="cashBtn" class="bg-green-600 text-black font-bold py-2 px-4 rounded hover:bg-green-500 transition">
+          💵 Pay with Cash (In Person)
+        </button>
+        <button id="cashAppBtn"
+          class="bg-yellow-400 text-black font-bold py-2 px-4 rounded hover:bg-yellow-300 transition">
+          💸 Pay with Cash App
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase SDK and Order Logic -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCus7pYzljumpJU7GUWJtsTJMS5UwFgASg",
+    authDomain: "ksw-brownsville.firebaseapp.com",
+    databaseURL: "https://ksw-brownsville-default-rtdb.firebaseio.com",
+    projectId: "ksw-brownsville",
+    storageBucket: "ksw-brownsville.appspot.com",
+    messagingSenderId: "915352510001",
+    appId: "1:915352510001:web:a9734324b86375f63ebf10",
+    measurementId: "G-6Q6WTGQXCD"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  const checkboxes = document.querySelectorAll('.item-check');
+  const qtyInputs = document.querySelectorAll('.item-qty');
+  const orderList = document.getElementById('orderList');
+  const orderTotal = document.getElementById('orderTotal');
+  const cashAppBtn = document.getElementById('cashAppBtn');
+  const cashBtn = document.getElementById('cashBtn');
+
+  const textbookChecks = document.querySelectorAll('.textbook-check');
+  const textbookQty = document.querySelector('.textbook-qty');
+
+  // Enable/disable quantity input for textbook
+  textbookChecks.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      const anySelected = Array.from(textbookChecks).some(cb => cb.checked);
+      textbookQty.disabled = !anySelected;
+      updateOrder();
+    });
+  });
+
+  checkboxes.forEach((box, i) => {
+    const qtyInput = qtyInputs[i];
+    box.addEventListener('change', () => {
+      qtyInput.disabled = !box.checked;
+      updateOrder();
+    });
+    qtyInput.addEventListener('input', updateOrder);
+  });
+
+  cashAppBtn.addEventListener('click', () => submitOrder('cashapp'));
+  cashBtn.addEventListener('click', () => submitOrder('cash'));
+
+  function updateOrder() {
+    let total = 0;
+    orderList.innerHTML = '';
+
+    checkboxes.forEach((box, i) => {
+      const qty = parseInt(qtyInputs[i].value) || 0;
+      if (box.checked && qty > 0) {
+        const name = box.dataset.name;
+        const price = parseFloat(box.dataset.price);
+        const lineTotal = qty * price;
+        total += lineTotal;
+
+        const li = document.createElement('li');
+        li.textContent = `${name} × ${qty} = $${lineTotal.toFixed(2)}`;
+        orderList.appendChild(li);
+      }
+    });
+
+    orderTotal.textContent = total.toFixed(2);
+  }
+
+  function submitOrder(method) {
+    const orderItems = [];
+    let total = 0;
+
+    checkboxes.forEach((box, i) => {
+      const qty = parseInt(qtyInputs[i].value) || 0;
+      if (box.checked && qty > 0) {
+        const name = box.dataset.name;
+        const price = parseFloat(box.dataset.price);
+        const lineTotal = qty * price;
+        total += lineTotal;
+        orderItems.push({ name, price, qty, lineTotal });
+      }
+    });
+
+    if (orderItems.length === 0) {
+      alert("❗ Please select at least one item.");
+      return;
+    }
+
+    const timestamp = new Date().toISOString();
+    push(ref(db, "orders"), {
+      orderItems,
+      total,
+      paymentMethod: method,
+      timestamp
+    });
+
+    if (method === 'cashapp') {
+      alert("✅ Order received! Redirecting to Cash App...");
+      setTimeout(() => {
+        window.location.href = "https://cash.app/$RaulSosaKukSoolWon";
+      }, 2000);
+    } else {
+      alert("✅ Order saved! Please pay with cash at the front desk.");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+
+</html>

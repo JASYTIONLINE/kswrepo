@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-yellow-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Admin — KSW</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen p-6 flex flex-col items-center">
+
+  <h1 class="text-3xl font-bold text-yellow-400 mb-4">📦 Order Admin Dashboard</h1>
+  <p class="mb-6 text-yellow-200 text-center">View all customer orders in real time</p>
+
+  <section id="orderContainer" class="w-full max-w-6xl space-y-6"></section>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCus7pYzljumpJU7GUWJtsTJMS5UwFgASg",
+      authDomain: "ksw-brownsville.firebaseapp.com",
+      databaseURL: "https://ksw-brownsville-default-rtdb.firebaseio.com",
+      projectId: "ksw-brownsville",
+      storageBucket: "ksw-brownsville.appspot.com",
+      messagingSenderId: "915352510001",
+      appId: "1:915352510001:web:a9734324b86375f63ebf10",
+      measurementId: "G-6Q6WTGQXCD"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const ordersRef = ref(db, "orders");
+    const container = document.getElementById("orderContainer");
+
+    onValue(ordersRef, (snapshot) => {
+      const data = snapshot.val() || {};
+      container.innerHTML = ""; // Clear current list
+
+      Object.entries(data).reverse().forEach(([key, order]) => {
+        const card = document.createElement("div");
+        const isCash = order.paymentMethod === "cash";
+
+        card.className = `border-l-4 p-4 rounded border-${isCash ? "green" : "yellow"}-400 bg-[#1a1a1a]`;
+
+        const date = new Date(order.timestamp).toLocaleString();
+        const method = isCash ? "💵 Cash" : "💸 Cash App";
+
+        const itemsHTML = order.orderItems.map(item => `
+          <div class="flex justify-between text-sm mb-1">
+            <span>${item.name} × ${item.qty}</span>
+            <span>$${item.lineTotal.toFixed(2)}</span>
+          </div>
+        `).join("");
+
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-lg font-bold text-yellow-300">${method}</span>
+            <span class="text-sm text-yellow-500">${date}</span>
+          </div>
+          <div class="text-yellow-200 mb-2">${itemsHTML}</div>
+          <div class="text-right font-bold text-yellow-400">Total: $${order.total.toFixed(2)}</div>
+        `;
+
+        container.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
